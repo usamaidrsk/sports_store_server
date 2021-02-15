@@ -1,7 +1,10 @@
 FROM node:12.18.3
 WORKDIR /app
+COPY authMiddleware.js ./
+COPY data.json ./
+COPY data.js ./
+COPY server.js ./
 COPY ["package.json", "package-lock.json*", "./"]
 RUN npm install
-COPY . .
 EXPOSE 5050
-CMD ["node", "src/server.js"]
+CMD ["node", "server.js"]
