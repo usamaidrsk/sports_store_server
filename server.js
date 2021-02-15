@@ -9,7 +9,7 @@ app.use(bodyParser.json());
 app.use(auth);
 app.use("/api", router);
 app.use(history());
-app.use("/", express.static("./dist"));
+// app.use("/", express.static("./dist"));
 let port = process.env.PORT;
 if (port == null || port == "") {
   port = 5050;
