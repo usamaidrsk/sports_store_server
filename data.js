@@ -1,9 +1,9 @@
-var faker = require("faker");
-var data = [];
-var categories = ["Watersports", "Soccer", "Chess", "Running"];
+const faker = require("faker");
+let data = [];
+const categories = ["Watersports", "Soccer", "Chess", "Running"];
 faker.seed(100);
 for (let i = 1; i <= 500; i++) {
-    var category = faker.helpers.randomize(categories);
+    const category = faker.helpers.randomize(categories);
     data.push({
     id: i,
     name: faker.commerce.productName(),
